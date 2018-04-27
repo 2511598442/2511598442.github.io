@@ -26,7 +26,7 @@
 .context-item{
 	box-sizing: border-box;
 	margin: 5px;
-	width: 200px;
+	width: 300px;
 	 color: #FFFFFF;
 	 font-family: '微软雅黑',Impact,sans-serif;
 	 letter-spacing: 0.02em;
@@ -34,13 +34,13 @@
 	 font-size: 2em;
 	background-color: rgba(255,255,255,0.1);
 	padding: 5px;
-	height: 400px;
+	height: 300px;
 	
 	
 }
 
 .context-item img{
-	width: 190px;
+	width: 290px;
 	height: 190px
 }
 
