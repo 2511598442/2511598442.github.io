@@ -1,229 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/home.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/home.js"></script>
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+		body{
+			overflow: hidden;
+			background: black;
+		}
+		.bigbox {
+			width: 80vw;
+			height: 80vh;
+			margin: 200px auto;
+			perspective: 35vw;
+			transform-style: preserve-3d;
+		}
+
+		.box {
+			transform-style: preserve-3d;
+			position: relative;
+			width: 80vw;
+			height: 80vh;
+		}
+
+		.mian {
+			padding-top: 0px;
+			/* backface-visibility:hidden; */
+			width: 80vw;
+			height: 80vh;
+			position: absolute;
+			text-align: center;
+			color: #fff;
+			background: blue;
+			line-height: 100px;
+			font-size: 80px;
+	
+			
+		}
+		.box {
+			transition: transform 2s;
+		}
+
+		.inner{
+			
+
+			height: 100%;
+			width: 100%;
+			background: grey;
+
+		}
+
+		.inner:hover{
+			transform: scale(1.9); 
+			/* /* z-index: 100; */
+		}
+		.text{
+			color: white;
+			position: absolute;
+			top: 100px;
+			left: 50%;
+			transform: translate(-50%);
+		}
+	</style>
 </head>
+
 <body>
-    
-    <nav class="side-bar">
-        <img class="user-head" src="img/userhead.jpg" alt="">
-        
-        <div class='side-bar-item'>选项</div>
-        <div class='side-bar-item'>选项</div>
-        <div class='side-bar-item'>选项</div>
-        <div class='side-bar-item'>选项</div>
-        <div class='side-bar-item'>选项</div>
-        <div class='side-bar-item'>选项</div>
-        <div class='side-bar-item'>选项</div>
-    </nav>
-    <section class="right">
-        
-        <nav class="tab">
-            <div class="tab-item" href="#">
-                分类
-                <span class="line"></span>
-                <div class="tab-item-inner">
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                </div>
-            </div>
-            <div class="tab-item" href="#">
-                分类
-                <span class="line"></span>
-                <div class="tab-item-inner">
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                </div>
-            </div>
-            <div class="tab-item" href="#">
-                分类
-                <span class="line"></span>
-                <div class="tab-item-inner">
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                </div>
-            </div>
-            <div class="tab-item" href="#">
-                分类
-                <span class="line"></span>
-                <div class="tab-item-inner">
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                </div>
-            </div>
-            <div class="tab-item" href="#">
-                分类
-                <span class="line"></span>
-                <div class="tab-item-inner">
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                    <div href="#" class="inner-item">分类</div>
-                </div>
-            </div>
-    
-        </nav>
+	<h1 class="text">欢迎来到xxx</h1>
+	<div class=bigbox>
+		<div class="box">
 
-
-        <main class="main">
-            
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            <div class="main-item">
-                <img src="img/photo.jpg" alt="">
-                <a href="">内容介绍</a>
-            </div>
-            
-
-        </main>
-        
-        <section class="background"></section>
-        <span class="mian-text">
-                向
-                下
-                滚
-                动
-        </span>
-    </section>
+		</div>
+	</div>
+	
 </body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+
+	var sum = [1, 2, 3, 4, 5, 4, 3, 1, 2];
+	for (var i = 0; i < 4; i++) {
+		$('.box').append('<div class="mian '+i+'"><div class="inner">aaa</div></div>');
+		$('.mian').eq(i).css({ 'transform': 'rotateY(' + (i * 90) + 'deg) translateZ(-40vw)',
+							   'background': 'img/photo.jpg',
+							   'background-size': 'cover' });
+		
+	}
+	
+	
+
+
+	var x = 0;
+	var y = 0;
+	$(window).keydown(function (event) {
+		var e = event || window.event || arguments.callee.caller.arguments[0];
+		console.log(e)
+		if (e && e.keyCode == 37) { // 左
+			y++;
+			$('.box').css({ 'transform': "rotateX(" + x * 20 + "deg) rotateY(" + y * 90 + "deg)" });
+		}
+		if (e && e.keyCode == 39) { // 右
+			y--;
+			$('.box').css({ 'transform': "rotateX(" + x * 20 + "deg) rotateY(" + y * 90 + "deg)" });
+		}
+		
+	})
+
+	$('.inner').on('mouseover',function(){
+		$(this).parent().siblings().fadeOut();
+		
+	});
+
+	$('.inner').on('mouseout',function(){
+		$(this).parent().siblings().fadeIn();
+		
+	});
+ 
+</script>
+
 </html>
