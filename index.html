@@ -48,7 +48,7 @@
 			height: 100%;
 			width: 100%;
 			background: grey;
-
+			transition: all 0.1s;
 		}
 
 		.inner:hover{
@@ -61,6 +61,7 @@
 			top: 100px;
 			left: 50%;
 			transform: translate(-50%);
+
 		}
 	</style>
 </head>
@@ -106,13 +107,16 @@
 	})
 
 	$('.inner').on('mouseover',function(){
-		$(this).parent().siblings().fadeOut();
-		
+		for (let index = 1; index > 0; index-=0.1) {
+				$(this).parent().siblings().css('opacity',index);
+		}
+	
 	});
 
 	$('.inner').on('mouseout',function(){
-		$(this).parent().siblings().fadeIn();
-		
+		for (let index = 0; index < 1; index+=0.1) {
+				$(this).parent().siblings().css('opacity',index);
+		}
 	});
  
 </script>
