@@ -1,124 +1,56 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>test</title>
-	<style>
-		body{
-			overflow: hidden;
-			background: black;
-		}
-		.bigbox {
-			width: 80vw;
-			height: 80vh;
-			margin: 200px auto;
-			perspective: 35vw;
-			transform-style: preserve-3d;
-		}
-
-		.box {
-			transform-style: preserve-3d;
-			position: relative;
-			width: 80vw;
-			height: 80vh;
-		}
-
-		.mian {
-			padding-top: 0px;
-			/* backface-visibility:hidden; */
-			width: 80vw;
-			height: 80vh;
-			position: absolute;
-			text-align: center;
-			color: #fff;
-			background: blue;
-			line-height: 100px;
-			font-size: 80px;
-	
-			
-		}
-		.box {
-			transition: transform 2s;
-		}
-
-		.inner{
-			
-
-			height: 100%;
-			width: 100%;
-			background: grey;
-			transition: all 0.1s;
-		}
-
-		.inner:hover{
-			transform: scale(1.9); 
-			/* /* z-index: 100; */
-		}
-		.text{
-			color: white;
-			position: absolute;
-			top: 100px;
-			left: 50%;
-			transform: translate(-50%);
-
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  
+  <title>射击游戏</title>
 </head>
-
 <body>
-	<h1 class="text">欢迎来到xxx</h1>
-	<div class=bigbox>
-		<div class="box">
+  <div id="game" data-status="start">  
+    <div class="game-panel">
+      <section class="game-intro game-ui">
+        <h1 class="section-title">射击游戏</h1>
+        <p class="game-desc">这是一个令人欲罢不能的射击游戏，使用 ← 和 → 操作你的飞机，使用空格（space）进行射击。一起来消灭宇宙怪兽吧！</p>
+        <p class="game-level">当前Level: 1</p>
+        <button class="js-play button">开始游戏</button>
+      </section>
+      <section class="game-failed game-ui">
+        <h1 class="section-title">游戏结束</h1>
+        <p class="game-info-text">最终得分: <span class="score"></span></p>
+        <button class="js-replay button">重新开始</button>
+      </section>
+      <section class="game-success game-ui">
+        <h1 class="section-title">游戏成功</h1>
+        <p class="game-next-level game-info-text"></p>
+        <button class="js-next button">继续游戏</button>
+      </section>
+      <section class="game-all-success game-ui">
+        <h1 class="section-title">通关成功</h1>
+        <p class="game-next-level game-info-text">你已经成功地防御了怪兽的所有攻击。</p>
+        <button class="js-replay2 js-replay button">再玩一次</button>
+      </section>
+    </div>
+    <canvas id="canvas" width="700" height="600">
+        <!-- 动画画板 -->
+    </canvas>
+  </div>
+  <!-- 主逻辑函数 -->
+  
+  <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 
-		</div>
-	</div>
-	
+  <script src="./js/plane.js" ></script>
+  <script src="./js/app.js" ></script>
+  
+  <script src="./js/arrayutil.js" ></script>
+  
+  <script src="./js/bullet.js" ></script>
+  
+  <script src="./js/monsters.js" ></script>
+  
+
+  
 </body>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script>
-
-	var sum = [1, 2, 3, 4, 5, 4, 3, 1, 2];
-	for (var i = 0; i < 4; i++) {
-		$('.box').append('<div class="mian '+i+'"><div class="inner">aaa</div></div>');
-		$('.mian').eq(i).css({ 'transform': 'rotateY(' + (i * 90) + 'deg) translateZ(-40vw)',
-							   'background': 'img/photo.jpg',
-							   'background-size': 'cover' });
-		
-	}
-	
-	
-
-
-	var x = 0;
-	var y = 0;
-	$(window).keydown(function (event) {
-		var e = event || window.event || arguments.callee.caller.arguments[0];
-		console.log(e)
-		if (e && e.keyCode == 37) { // 左
-			y++;
-			$('.box').css({ 'transform': "rotateX(" + x * 20 + "deg) rotateY(" + y * 90 + "deg)" });
-		}
-		if (e && e.keyCode == 39) { // 右
-			y--;
-			$('.box').css({ 'transform': "rotateX(" + x * 20 + "deg) rotateY(" + y * 90 + "deg)" });
-		}
-		
-	})
-
-	$('.inner').on('mouseover',function(){
-		for (let index = 1; index > 0; index-=0.1) {
-				$(this).parent().siblings().css('opacity',index);
-		}
-	
-	});
-
-	$('.inner').on('mouseout',function(){
-		for (let index = 0; index < 1; index+=0.1) {
-				$(this).parent().siblings().css('opacity',index);
-		}
-	});
- 
-</script>
-
 </html>
+
