@@ -274,7 +274,7 @@ font-weight: bold;
 }
 
 .tech-item:first-child::after {
-	width: 20%;
+	width: 80%;
 }
 
 .tech-item:nth-child(2)::after {
@@ -282,17 +282,24 @@ font-weight: bold;
 }
 
 .tech-item:nth-child(3)::after {
-	width: 50%;
+	width: 80%;
 }
 
-.tech-item:hover::after {
+.tech-item::after {
 	animation: progressShow 1s ease-out 0.5s 1;
 	-webkit-animation: progressShow 1s ease-out 0.5s 1;
 	-moz-animation: progressShow 1s ease-out 0.5s 1;
 	-ms-animation: progressShow 1s ease-out 0.5s 1;
 }
 
+
+#gamelink{
+	
+	color: black;
+
+}
 @keyframes progressShow {
+
 	20% {width: 0px;}
 }
 
