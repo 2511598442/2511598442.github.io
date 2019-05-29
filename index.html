@@ -1,56 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  
-  <title>射击游戏</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>个人简历</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="game" data-status="start">  
-    <div class="game-panel">
-      <section class="game-intro game-ui">
-        <h1 class="section-title">射击游戏</h1>
-        <p class="game-desc">这是一个令人欲罢不能的射击游戏，使用 ← 和 → 操作你的飞机，使用空格（space）进行射击。一起来消灭宇宙怪兽吧！</p>
-        <p class="game-level">当前Level: 1</p>
-        <button class="js-play button">开始游戏</button>
-      </section>
-      <section class="game-failed game-ui">
-        <h1 class="section-title">游戏结束</h1>
-        <p class="game-info-text">最终得分: <span class="score"></span></p>
-        <button class="js-replay button">重新开始</button>
-      </section>
-      <section class="game-success game-ui">
-        <h1 class="section-title">游戏成功</h1>
-        <p class="game-next-level game-info-text"></p>
-        <button class="js-next button">继续游戏</button>
-      </section>
-      <section class="game-all-success game-ui">
-        <h1 class="section-title">通关成功</h1>
-        <p class="game-next-level game-info-text">你已经成功地防御了怪兽的所有攻击。</p>
-        <button class="js-replay2 js-replay button">再玩一次</button>
-      </section>
-    </div>
-    <canvas id="canvas" width="700" height="600">
-        <!-- 动画画板 -->
-    </canvas>
-  </div>
-  <!-- 主逻辑函数 -->
-  
-  <!--   <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./js/plane.js" ></script>
-  <script src="./js/app.js" ></script>
-  
-  <script src="./js/arrayutil.js" ></script>
-  
-  <script src="./js/bullet.js" ></script>
-  
-  <script src="./js/monsters.js" ></script>
-  
-
-  
+	<div class="person-resume">
+		<section class="resume-basic-info">
+			<div class="basic-head">
+				<div class="portrait-container">
+					<i class="head-portrait"></i>
+				</div>
+				<h1 class="head-name">青蓝</h1>
+				<p class="head-sign">念经(coding)、参禅(thinking)、化缘(serching)</p>
+			</div>
+			<div class="basic-bd">
+				<ul class="info-list">
+					<li class="list-item">
+						<i class="iconfont icon-mail2"></i>
+						<span><a href="mailto:ycxu@imweb.io">ycxu@imweb.io</a></span>
+					</li>
+					<li class="list-item">
+						<i class="iconfont icon-phone"></i>
+						<span><a href="tel: 15989012552"> 15989012552 </a></span>
+					</li>
+					<li class="list-item">
+						<i class="iconfont icon-github"></i>
+						<span><a href="https://github.com/imweb" target="_blank">https://github.com/imweb </a></span>
+					</li>
+				</ul>
+			</div>
+			<div class="basic-ft">
+				<div class="ft-container">
+					<span>学历：本科</span>
+					<span>工作年限：4年</span>
+					<span>毕业院校：青岛大学</span>
+					<span>出生年月：1990年8月</span>
+				</div>
+			</div>
+		</section>
+		<article class="resume-work-info">
+			<div class="work-record">
+				<h3>工作经历</h3>
+				<div class="record-list">
+					<div class="record-item">
+						<p>2014.08 —— 至今</p>
+						<p>腾讯科技(深圳)有限公司 / 产品策划</p>
+						<p>负责腾讯课堂教研功能的策划；能熟练对接用户及运营侧，规划版本，推进需求落地，并根据数据及用户反馈优化功能；所负责功能覆盖PC客户端、PCWeb、APP、H5。</p>
+					</div>
+					<div class="record-item">
+						<p>2013.07 —— 2013.10</p>
+						<p>腾讯科技深圳有限公司 / 产品实习生</p>
+						<p>QQ群商业化探索（在线教育方向）负责QQ群商业化探索，调研用户使用QQ群进行在线教育的情况，由于实习期间表现良好得以留用。调研结果帮助项目组决策，加大投入在线教育的资源，并在之后成立了腾讯课堂项目。
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="work-tech">
+				<h3>技能特长</h3>
+				<div class="tech-list">
+					<div class="tech-item">
+						<span>了解</span>
+						<p>PS</p>
+						<p>基本切图</p>
+					</div>
+					<div class="tech-item">
+						<span>精通</span>
+						<p>HTML & CSS</p>
+						<p>语义化、CSS3、动画、响应式、移动端、预处理器...</p>
+					</div>
+					<div class="tech-item">
+						<span>熟悉</span>
+						<p>Javascript</p>
+						<p>jquery、node、react、vue、webpack...</p>
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
 </body>
 </html>
-
