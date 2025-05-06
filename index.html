@@ -6,13 +6,168 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>方舟海外仓</title>
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/flickity.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-     方舟海外仓123
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" alt="方舟海外仓" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">首页</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">服务项目</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stats">运营数据</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 全屏欢迎区 -->
+  <section id="home" class="parallax-section vh-100 d-flex align-items-center">
+    <div class="container text-white text-center position-relative">
+      <div class="map-container">
+        <img src="img/us-map.svg" alt="美国仓储分布图" class="w-100 h-100">
+      </div>
+      <h1 class="display-4 mb-4 position-relative" style="z-index:2">YJJ International Trade Inc</h1>
+      <p class="lead mb-4">一件代发 | 退货换标 | 码头提柜 | FBA转运</p>
+      <p class="lead mb-4">美国FTL&LTL卡车派送 | Usps Ups FedEx</p>
+      <div class="scroll-indicator">
+        <div class="arrow-down"></div>
+      </div>
+    </div>
+  </section>
+
+  <!--核心服务-->
+  <section id="services" class="py-5 bg-light vh-100 d-flex align-items-center">
+    <div class="container py-5">
+      <h2 class="text-center mb-5">核心服务</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title">仓储配送</h3>
+              <p class="card-text">全球智能仓储网络 | 自动化库存管理 | 实时物流追踪系统</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title">跨境运输</h3>
+              <p class="card-text">多式联运解决方案 | 海关清关服务 | 全程温控保障</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title">供应链金融</h3>
+              <p class="card-text">应收账款融资 | 库存质押融资 | 跨境结算服务</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据统计 -->
+  <section id="stats" class="parallax-section py-5 text-white vh-100 d-flex align-items-center">
+    <div class="container py-5">
+      <div class="row text-center g-4">
+        <div class="col-md-3">
+          <h3 class="display-4">15+</h3>
+          <p>年行业经验</p>
+        </div>
+        <!-- 类似统计区块 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系表单 -->
+  <section id="contact" class="py-5 vh-100 d-flex align-items-center">
+    <div class="container py-5">
+      <h2 class="text-center mb-5">获取定制方案</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="您的姓名">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="电子邮箱">
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="需求描述"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">提交咨询</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>深圳市前海深港合作区 | 400-888-8888 | service@arklogistics.com</p>
+      <p>营业时间：周一至周五 9:00-18:00（GMT+8）</p>
+    </div>
+  </footer>
+
+  <!-- 仓库信息模态框 -->
+  <div class="modal fade" id="stateModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="stateTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p id="stateContent"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 地图交互脚本 -->
+  <script src="js/map.js"></script>
+  <!-- 视差效果脚本 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  (function() {
+      const parallaxSections = document.querySelectorAll('.parallax-section');
+      
+      function updateParallax() {
+        parallaxSections.forEach(section => {
+          const scrollTop = window.pageYOffset;
+          const speed = section.dataset.speed || 0.5;
+          const yPos = -(scrollTop * speed);
+          section.style.backgroundPosition = `center ${yPos}px`;
+        });
+        requestAnimationFrame(updateParallax);
+      }
+      
+      window.addEventListener('scroll', () => {
+        requestAnimationFrame(updateParallax);
+      });
+      
+      // 初始化视差参数
+      document.getElementById('home').dataset.speed = 0.3;
+      document.getElementById('stats').dataset.speed = 0.6;
+    })();
+  });
+  </script>
 </body>
 
 </html>

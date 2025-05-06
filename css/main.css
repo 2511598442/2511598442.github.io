@@ -1,0 +1,126 @@
+/* 全屏布局适配 */
+.vh-100 {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .vh-100 {
+    min-height: auto;
+    height: auto !important;
+    padding: 4rem 0;
+  }
+  .card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* 视差滚动效果 */
+.parallax-section {
+  background-image: url("../img/背景.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* 导航栏样式 */
+.navbar {
+  background: linear-gradient(45deg, rgba(30, 58, 138, 0.9) 0%, rgba(147, 197, 253, 0.85) 100%);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 2px 15px rgba(30, 58, 138, 0.3);
+}
+
+/* 卡片悬浮效果 */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: rgba(255, 255, 255, 0.95);
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
+}
+
+/* 地图交互样式 */
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.state-path {
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.state-path:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(25, 118, 210, 0.8));
+}
+
+/* 自定义模态框样式 */
+#stateModal .modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+}
+
+#stateModal .modal-header {
+  border-bottom: 2px solid #1976d2;
+}
+
+/* 数据统计动画 */
+#stats {
+  background: rgba(30, 58, 138, 0.9);
+  counter-reset: stats;
+}
+#stats h3::before {
+  content: counter(stats);
+  counter-increment: stats;
+  animation: count 1s ease-out;
+}
+
+/* 滚动指示器动画 */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.arrow-down {
+  width: 30px;
+  height: 30px;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  border-top: none;
+  border-left: none;
+  animation: scroll 1.5s infinite;
+  margin: 20px auto;
+}
+
+@keyframes scroll {
+  0% { transform: translateY(0) rotate(45deg); }
+  50% { transform: translateY(15px) rotate(45deg); }
+  100% { transform: translateY(0) rotate(45deg); }
+}
+
+/* 内容垂直居中 */
+.d-flex.align-items-center {
+  justify-content: center;
+}
+
+/* 调整区块间距 */
+.container.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+@keyframes count {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
