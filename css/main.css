@@ -1,21 +1,7 @@
-/* 全屏布局适配 */
-.vh-100 {
-  min-height: 100vh;
-  padding: 2rem 0;
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-  .vh-100 {
-    min-height: auto;
-    height: auto !important;
-    padding: 4rem 0;
-  }
-  .card {
-    margin-bottom: 1.5rem;
-  }
-}
-
+/* *{
+  border: 1px solid #000000;
+  box-sizing: border-box;
+} */
 /* 视差滚动效果 */
 .parallax-section {
   background-image: url("../img/背景.jpg");
@@ -34,58 +20,27 @@
 }
 
 /* 卡片悬浮效果 */
-.card {
+.scard {
+  padding: 25px;
+  border-radius: 25px;
   transition: transform 0.3s, box-shadow 0.3s;
   background: rgba(255, 255, 255, 0.95);
 }
-.card:hover {
+.scard:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
 }
 
-/* 地图交互样式 */
-.map-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.state-path {
-  opacity: 0.7;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.state-path:hover {
-  opacity: 1;
-  filter: drop-shadow(0 0 8px rgba(25, 118, 210, 0.8));
-}
-
-/* 自定义模态框样式 */
-#stateModal .modal-content {
+.logocard {
+  padding: 5px;
+  border-radius: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
   background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
 }
-
-#stateModal .modal-header {
-  border-bottom: 2px solid #1976d2;
+.logocard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
 }
-
-/* 数据统计动画 */
-#stats {
-  background: rgba(30, 58, 138, 0.9);
-  counter-reset: stats;
-}
-#stats h3::before {
-  content: counter(stats);
-  counter-increment: stats;
-  animation: count 1s ease-out;
-}
-
 /* 滚动指示器动画 */
 .scroll-indicator {
   position: absolute;
@@ -101,6 +56,7 @@
   border-left: none;
   animation: scroll 1.5s infinite;
   margin: 20px auto;
+  position: absolute;
 }
 
 @keyframes scroll {
@@ -109,18 +65,346 @@
   100% { transform: translateY(0) rotate(45deg); }
 }
 
-/* 内容垂直居中 */
-.d-flex.align-items-center {
+.outer{
+  padding-top: 100px;
+  width: 100%;
+  height: calc(100vh);
+  /* border: 1px solid #000000; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.inner{
+  width: calc(100% - 200px);
+  height: calc(100% - 250px);
+  display: flex;
+}
+
+.introduction-left{
+  width: 40%;
+  height: 100%;
+  border: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: aliceblue;
+}
+.introduction-right{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-between;
+  flex-direction: row-reverse;
+}
+.intrcontent{
+  width: 43%;
+  height: 46%;
+  margin-right: 20px;
+}
+.logo-outer{
+  width: 200px;
+  height: 100px;overflow: hidden;
+}
+.workpartner-inner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-evenly;
+  flex-direction: row;
+}
+.logoimg{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+#storage{
+  background-color: #325aad;
+}
+
+.storage-inner{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+.whcard{
+  margin: 5px;
+  height: 100%;
+  width: 30%;
+}
+
+.whcard>img{
+  width: 100%;
+  object-fit: contain;
+}
+
+.services-inner{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.servicecard{
+  width: 45%;
+  height: 30%;
+  overflow: hidden;
+}
+
+.servicecard>img{
+  height: 100%;
+  object-fit: contain;
+}
+
+
+#introduction{
+  background-color: #325aad;
+}
+
+.introduction-inner{
+  display: flex;
+}
+
+.introduction-left>span{
+  font-size: 50px;
+  font-weight: 1000;
+}
+
+.introduction-left>p{
+  font-size: 15px;
+  text-indent: 2em;
+}
+.intrcontent-name{
+  font-size: 30px;
+  font-weight: 1000;
+}
+.intrcontent-h{
+  font-size: 20px;
+}
+.intrcontent-c{
+  margin-top: 40px;
+  font-size: 15px;
+  text-indent: 2em;
+}
+
+.workpartner-text{
+  font-size: 30px;
+  color: #325aad;
+  font-weight: 1000;
+}
+
+#workpartner{
+  display: flex;
+  flex-direction: column;
+}
+
+/* From Uiverse.io by codebykay101 */ 
+
+.container .glass {
+  position: relative;
+
+  background: linear-gradient(#fff2, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
   justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  margin: 0 -45px;
+  backdrop-filter: blur(10px);
+  transform: rotate(calc(var(--r) * 1deg));
 }
 
-/* 调整区块间距 */
-.container.py-5 {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+.glass {
+  background: linear-gradient(#fff2, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  /* transform: rotate(calc(var(--r) * 1deg)); */
 }
 
-@keyframes count {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.container:hover .glass {
+  transform: rotate(0deg);
+  /* transform: scale(1.1); */
+  margin: 0 10px;
+}
+
+.container .glass::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.container .glass svg {
+  font-size: 2.5em;
+  fill: #fff;
+}
+.whcard{
+  /* width: 300px;
+  height: 500px;
+  display: flex; */
+  height: 300px;
+  padding: 20px;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.whcard:hover{
+  
+  z-index: 1000;
+  width: 80%;
+  height: 80%;
+  transform: scale(1.1) ;
+  box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
+}
+
+.whtextbox{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+#storage{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.storagetext{
+  font-size: 30px;
+  color:white;
+  font-weight: 1000;
+}
+
+#contact{
+  background-color: #325aad;
+}
+
+.servtextbox{
+  color: black;
+  padding: 20px;
+}
+
+.servicecard{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.servname{
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+.servp{
+  font-size: 10px;
+  text-indent: 2em;
+}
+
+.welcome{
+  width: 100vw;
+}
+
+.contact-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-header h3 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+.contact-position {
+  color: #718096;
+  margin-bottom: 1.5rem;
+}
+
+.contact-platforms, .contact-services {
+  margin: 1.5rem 0;
+  color: #2d3748;
+}
+
+.contact-info, .contact-address {
+  margin: 1rem 0;
+  color: #4a5568;
+}
+
+.contact-info i, .contact-address i {
+  margin-right: 0.5rem;
+  color: #1e3a8a;
+}
+
+.contact-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.wechat-qrcode {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+}
+
+.wechat-qrcode img {
+  width: 100%;
+
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .wechat-qrcode {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 20px;
+  }
+  
+  .contact-header h3 {
+    font-size: 1.5rem;
+  }
+}
+
+
+.servimg{
+  max-width: 80vw;
 }

@@ -1,0 +1,21 @@
+/* 小屏幕设备样式 */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .service-card, .storage-card {
+    flex-basis: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .partner-logo {
+    flex-basis: 45%;
+    max-width: 45%;
+  }
+
+  .scroll-indicator {
+    bottom: 20px;
+  }
+}

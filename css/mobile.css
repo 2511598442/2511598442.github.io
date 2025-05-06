@@ -1,0 +1,96 @@
+/* 移动端基础样式 */
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+
+  .navbar-brand img {
+    height: 30px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .parallax-section {
+    background-attachment: scroll;
+  }
+
+  /* 新增移动端样式 */
+  .outer {
+    padding: 20px;
+    height: auto;
+  }
+
+  .inner {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .introduction-left,
+  .introduction-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .intrcontent {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .whcard {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .servicecard {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .wechat-qrcode {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .scroll-indicator {
+    bottom: 10px;
+  }
+
+  .storagetext {
+    font-size: 24px;
+  }
+
+  .servname {
+    font-size: 18px;
+  }
+
+  .servp {
+    font-size: 12px;
+  }
+
+  .workpartner-inner{
+    display: flex;
+    flex-direction: row;
+  }
+  .logo-outer{
+    width: 100px;
+    height: 50px;
+  }
+}
