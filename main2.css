@@ -1,0 +1,97 @@
+:root {
+  --primary-blue: #0a1f5c;
+  --accent-blue: #007bff;
+  --gradient-start: #2c3e50;
+  --gradient-end: #3498db;
+  --text-light: #f8f9fa;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(45deg, #f8f9fc, #eef2f6);
+  color: #2c3e50;
+}
+
+header {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  padding: 1rem 5%;
+}
+
+header nav ul li a {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+}
+
+header nav ul li a:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+}
+
+section {
+  padding: 6rem 5%;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.card-style {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 30px rgba(0,46,109,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-style:hover {
+  transform: translateY(-5px);
+}
+
+.service-card {
+  background: linear-gradient(135deg, white, #f8faff);
+  border-left: 4px solid var(--accent-blue);
+}
+
+.partner-logos img {
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+.partner-logos img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.warehouse img {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .card-style {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  header nav ul li a {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+}

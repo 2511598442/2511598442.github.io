@@ -125,12 +125,13 @@
 
 #storage{
   background-color: #325aad;
+  height: 120vh;
 }
 
 .storage-inner{
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
+  justify-content: center;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
 }
@@ -155,10 +156,12 @@
   width: 45%;
   height: 30%;
   overflow: hidden;
+
 }
 
 .servicecard>img{
   height: 100%;
+  width: 60%;
   object-fit: contain;
 }
 
@@ -257,12 +260,12 @@
   /* width: 300px;
   height: 500px;
   display: flex; */
-  height: 300px;
+  height: 380px;
   padding: 20px;
   transition: all 0.5s;
   overflow: hidden;
 }
-
+/* 
 .whcard:hover{
   
   z-index: 1000;
@@ -270,7 +273,7 @@
   height: 80%;
   transform: scale(1.1) ;
   box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
-}
+} */
 
 .whtextbox{
   position: absolute;
@@ -289,6 +292,7 @@
   font-size: 30px;
   color:white;
   font-weight: 1000;
+  margin-bottom: 50px;
 }
 
 #contact{
@@ -297,7 +301,9 @@
 
 .servtextbox{
   color: black;
-  padding: 20px;
+    /* padding: 20px; */
+    margin: 10px;
+    height: 100%;
 }
 
 .servicecard{
@@ -313,7 +319,7 @@
 }
 
 .servp{
-  font-size: 10px;
+  font-size: 15px;
   text-indent: 2em;
 }
 
@@ -407,4 +413,23 @@
 
 .servimg{
   max-width: 80vw;
+}
+
+#services{
+  height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.servicetext{
+  font-size: 30px;
+    color: #325aad;
+    font-weight: 1000;
+    margin-bottom: 50px;
+}
+
+.whname{
+  font-size: 20px;
+  font-weight: 1000;
 }
