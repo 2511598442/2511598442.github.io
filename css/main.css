@@ -125,7 +125,7 @@
 
 #storage{
   background-color: #325aad;
-  height: 120vh;
+  min-height: 120vh;
 }
 
 .storage-inner{
@@ -416,7 +416,7 @@
 }
 
 #services{
-  height: 150vh;
+  min-height: 150vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
